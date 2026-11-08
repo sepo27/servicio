@@ -34,6 +34,8 @@ Use [this public GIST](https://gist.github.com/sepo27/41ff6efa06f5384c098f438743
 - Setup GIT Hooks
   - setup husky
   - setup precommit hooks using `precommit.sh` from public gist above
+    - copy `precommit.sh` into `/hooks/precommit.sh`
+    - reference this file from husky
 
 ## Incorporate Packaging & Release
 - Setup changelog
