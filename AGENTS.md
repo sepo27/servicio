@@ -24,6 +24,7 @@ Use [this public GIST](https://gist.github.com/sepo27/41ff6efa06f5384c098f438743
 - Setup Typescript
   - install latest version as dev dependency
   - initialize configs from public gist above
+  - mind `@types/node"`
 
 - Setup Eslint
   - install latest version as dev dependency
