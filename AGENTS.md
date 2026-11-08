@@ -3,7 +3,7 @@
 Setup new NodeJS Typescript Project.  
 Process below instructions one-by-one.  
 Confirm before executing each step.  
-Use [this public GIST](https://gist.github.com/sepo27/41ff6efa06f5384c098f438743eb651e) to get template files on different stages.
+Use [this public GIST](https://gist.github.com/sepo27/41ff6efa06f5384c098f438743eb651e) to get template files for different stages.
 
 ## Setup repo
 - copy `.gitignore` from public git above
