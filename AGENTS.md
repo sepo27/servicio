@@ -1,0 +1,34 @@
+# Setup Typescript Project
+
+Setup new NodeJS Typescript Project.  
+Process below instructions one-by-one.  
+Confirm before executing each step.  
+Use [this public GIST](https://gist.github.com/sepo27/41ff6efa06f5384c098f438743eb651e) to get template files on different stages.
+
+## Setup repo
+- copy `.gitignore` from public git above
+
+## Add Tooling
+- Initialize `.nvmrc` with latest stable LTS version of NodeJS
+
+- Initialize PNPM project
+  - install PNPM if missing
+  - initialize PNPM project using `pacakge.json` template file from gist above
+
+- Setup Typescript
+  - install latest version as dev dependency
+  - initialize configs from public gist above
+
+- Setup Eslint
+  - install latest version as dev dependency
+  - use `eslint.config.js` from public gist above
+
+- Setup GIT Hooks
+  - setup husky
+  - setup precommit hooks using `precommit.sh` from public gist above
+
+## Incorporate Packaging & Release
+- Setup changelog
+  - use `conventional-changelog` package
+  - use `.versionrc.js` config from public gist above
+
