@@ -25,6 +25,7 @@ Use [this public GIST](https://gist.github.com/sepo27/41ff6efa06f5384c098f438743
   - install latest version as dev dependency
   - initialize configs from public gist above
   - mind `@types/node"`
+  - add build script to `prepare` lifecycle
 
 - Setup Eslint
   - install latest version as dev dependency
