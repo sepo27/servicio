@@ -14,6 +14,9 @@ Use [this public GIST](https://gist.github.com/sepo27/41ff6efa06f5384c098f438743
 - Initialize PNPM project
   - install PNPM if missing
   - initialize PNPM project using `pacakge.json` template file from gist above
+  - update project name from folder name (but strip `.git` if present)
+  - update project description from input prompt
+  - install node modules
 
 - Setup Typescript
   - install latest version as dev dependency
