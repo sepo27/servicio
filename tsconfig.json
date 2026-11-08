@@ -5,6 +5,7 @@
     "target": "es6",
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
+    "rootDir": "./",
     "outDir": "./dist",
     "types": ["node"]
   },
