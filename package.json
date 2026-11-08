@@ -23,9 +23,9 @@
     }
   },
   "devDependencies": {
+    "typescript": "^7.0.2"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "author": "Sergey Poskachey",
   "license": "ISC"
 }

@@ -15,7 +15,8 @@ Use [this public GIST](https://gist.github.com/sepo27/41ff6efa06f5384c098f438743
   - install PNPM if missing
   - initialize PNPM project using `pacakge.json` template file from gist above
   - update project name from folder name (but strip `.git` if present)
-  - update project description from input prompt
+  - update project description from prompt
+  - update package keywords from prompt
   - install node modules
 
 - Setup Typescript
@@ -25,6 +26,10 @@ Use [this public GIST](https://gist.github.com/sepo27/41ff6efa06f5384c098f438743
 - Setup Eslint
   - install latest version as dev dependency
   - use `eslint.config.js` from public gist above
+
+- Initialize dummy `indes.ts`
+  - add `/src/index.ts`
+  - with dummy content: "console.log("=== Index"")"
 
 - Setup GIT Hooks
   - setup husky
