@@ -1,0 +1,31 @@
+{
+  "name": "servicio",
+  "description": "Backend Service Frame",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p ./tsconfig.build.json",
+    "lint": "eslint ./src",
+    "typecheck": "tsc --noEmit"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.18.0",
+      "onFail": "download"
+    }
+  },
+  "devDependencies": {
+  },
+  "keywords": [
+  ],
+  "author": "Sergey Poskachey",
+  "license": "ISC"
+}
