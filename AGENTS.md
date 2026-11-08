@@ -28,6 +28,7 @@ Use [this public GIST](https://gist.github.com/sepo27/41ff6efa06f5384c098f438743
 - Setup Eslint
   - install latest version as dev dependency
   - use `eslint.config.js` from public gist above
+  - make sure to install all required dependent packages from the config
 
 - Initialize dummy `indes.ts`
   - add `/src/index.ts`
