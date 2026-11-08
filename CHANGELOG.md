@@ -1,3 +1,7 @@
+## <small>0.1.1 (2026-11-08)</small>
+
+* Init README ([428213c](https://github.com/sepo27/servicio/commit/428213c))
+
 ## 0.1.0 (2026-11-08)
 
 * Fix changelog script & update AGENTS.md respectivelly ([1e17b68](https://github.com/sepo27/servicio/commit/1e17b68))
