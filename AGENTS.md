@@ -6,9 +6,11 @@ Confirm before executing each step.
 Use [this public GIST](https://gist.github.com/sepo27/41ff6efa06f5384c098f438743eb651e) to get template files for different stages.
 
 ## Setup repo
+
 - copy `.gitignore` from public git above
 
 ## Add Tooling
+
 - Initialize `.nvmrc` with latest stable LTS version of NodeJS
 
 - Initialize PNPM project
@@ -38,6 +40,7 @@ Use [this public GIST](https://gist.github.com/sepo27/41ff6efa06f5384c098f438743
     - reference this file from husky
 
 ## Incorporate Packaging & Release
+
 - Setup changelog
   - use `conventional-changelog` package
   - use `.versionrc.js` config from public gist above
