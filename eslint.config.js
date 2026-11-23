@@ -82,6 +82,15 @@ export default [
     },
   },
   {
+    files: ["**/*.spec.ts"],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        ...globals.jest,
+      },
+    },
+  },
+  {
     ignores: ["node_modules/", "dist/", "build/", ".sandbox/"],
   },
 ];

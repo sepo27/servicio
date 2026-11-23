@@ -1,7 +1,7 @@
 export { HttpMethod } from './HttpMethod.js';
 
 export { HttpStatus } from './response/httpStatus.js';
-export { HttpResponse } from './response/HttpResponse.js';
+export type { HttpResponse } from './response/HttpResponse.js';
 export { SuccessResponse } from './response/SuccessResponse.js';
 
 export {

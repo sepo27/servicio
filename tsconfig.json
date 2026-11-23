@@ -7,11 +7,10 @@
     "allowSyntheticDefaultImports": true,
     "rootDir": "./",
     "outDir": "./dist",
-    "types": ["node"]
+    "types": ["node", "jest", "jest-extended"]
   },
   "include": ["./src"],
   "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
+    "node_modules"
   ]
 }

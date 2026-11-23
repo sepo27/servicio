@@ -48,3 +48,11 @@ if [[ `grepSrcFiles "tsx?"` ]]; then
   pnpm run --silent typecheck || exit 1
   println "🮱"
 fi
+
+# Tests
+
+if [[ `grepSrcFiles "ts"` ]]; then
+  infom "Running tests ... "
+  pnpm test:base -o || exit 1
+  println "🮱"
+fi
