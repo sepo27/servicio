@@ -1,3 +1,8 @@
+## 0.2.0 (2026-11-25)
+
+* feat: Implement base skeleton ([37661e3](https://github.com/sepo27/servicio/commit/37661e3))
+* feat(http-meta): Implement basics ([6a51c04](https://github.com/sepo27/servicio/commit/6a51c04))
+
 ## <small>0.1.1 (2026-11-08)</small>
 
 * Init README ([428213c](https://github.com/sepo27/servicio/commit/428213c))
