@@ -1,3 +1,7 @@
+## <small>0.2.4 (2026-11-25)</small>
+
+* doc: Update README ([655ec77](https://github.com/sepo27/servicio/commit/655ec77))
+
 ## <small>0.2.3 (2026-11-25)</small>
 
 ## <small>0.2.2 (2026-11-25)</small>
