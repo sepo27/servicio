@@ -14,6 +14,14 @@ Backend Service Frame.
 
 # Quick Start
 
+Install
+```shell
+pnpm install @sepo27/servicio
+
+# MIND to install peer dependencies as well (i.e. Express JS) !
+```
+
+Use
 ```typescript
 import { Route, servicio, HttpStatus, SuccessResponse } from '@sepo27/servicio';
 
