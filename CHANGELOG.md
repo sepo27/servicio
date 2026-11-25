@@ -1,3 +1,9 @@
+## <small>0.2.7 (2026-11-25)</small>
+
+* chore: Introduce release script ([b7b7f42](https://github.com/sepo27/servicio/commit/b7b7f42))
+* chore: Add express as peer depedency ([a11d549](https://github.com/sepo27/servicio/commit/a11d549))
+* docs: Update README ([a7c45cc](https://github.com/sepo27/servicio/commit/a7c45cc))
+
 ## <small>0.2.6 (2026-11-25)</small>
 
 * chore: Add package keywords ([0824bac](https://github.com/sepo27/servicio/commit/0824bac))
