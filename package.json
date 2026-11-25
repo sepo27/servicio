@@ -12,7 +12,7 @@
     "test:base": "jest -c ./jest.config.js",
     "test": "pnpm test:base ./src",
     "server.sand": "tsx .sandbox/server",
-    "prepare": "husky && pnpm run build",
+    "prepack": "husky && pnpm run build",
     "version": "conventional-changelog -i CHANGELOG.md -s -n .versionrc.js && git add CHANGELOG.md",
     "release": "./scripts/release.sh"
   },
