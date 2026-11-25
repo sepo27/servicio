@@ -1,3 +1,7 @@
+## <small>0.2.2 (2026-11-25)</small>
+
+* chore: Update package name ([039f7f6](https://github.com/sepo27/servicio/commit/039f7f6))
+
 ## <small>0.2.1 (2026-11-25)</small>
 
 * chore: Prep for publish ([59b4eab](https://github.com/sepo27/servicio/commit/59b4eab))
