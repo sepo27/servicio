@@ -1,4 +1,4 @@
 import express from 'express';
 
-// TODO
+// TODO: populate wrt to express.Request
 export const expressRequestMock = () => ({}) as express.Request;

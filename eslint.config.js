@@ -82,7 +82,7 @@ export default [
     },
   },
   {
-    files: ["**/*.spec.ts"],
+    files: ["**/*.spec.ts", "**/@spec/**/*.ts"],
     languageOptions: {
       globals: {
         ...globals.node,

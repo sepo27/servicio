@@ -37,7 +37,7 @@ grepSrcFiles() {
 
 if [[ `grepSrcFiles "tsx?"` ]]; then
   infom "Linting src ... "
-  pnpm run --silent lint --quiet `grepSrcFiles "ts"` || exit 1
+  pnpm run --silent lint:base --quiet `grepSrcFiles "ts"` || exit 1
   println "🮱"
 fi
 

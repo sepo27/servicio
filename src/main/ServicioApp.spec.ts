@@ -2,7 +2,7 @@ import express from 'express';
 import { HttpMethod, HttpStatus, SuccessResponse } from '../lib/http-meta/index.js';
 import { Route } from './Route.js';
 import { ServicioApp } from './ServicioApp.js';
-import { expressRequestMock, expressResponseMock } from '../../spec/index.js';
+import { expressRequestMock, expressResponseMock } from '../@spec/index.js';
 import { ExpressHttpMethod } from '../lib/express/types.js';
 
 describe('ServicioApp', () => {
