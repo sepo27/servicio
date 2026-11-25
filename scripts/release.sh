@@ -39,7 +39,7 @@ git push && git push --tags
 
 echo
 
-info "==== Publishing" && echo
+info "=== Publishing" && echo
 
 pnpm publish
 
