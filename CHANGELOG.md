@@ -1,3 +1,7 @@
+## <small>0.2.10 (2026-11-25)</small>
+
+* chore: Add colors to release script ([102e2a9](https://github.com/sepo27/servicio/commit/102e2a9))
+
 ## <small>0.2.9 (2026-11-25)</small>
 
 ## <small>0.2.8 (2026-11-25)</small>
