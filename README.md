@@ -70,9 +70,9 @@ const app = servicio();
 app.useErrorHandler();
 ```
 
-**⚠ `useErrorHandler()` has to be called at the end same way as any other express error handler.**  
+**:warning: `useErrorHandler()` has to be called at the end same way as any other express error handler.**  
 
-**⚠ Servicio default error handler does not pass through !  
+**:warning: Servicio default error handler does not pass through !  
 So any error *(and in-fact other)* handler used below `useErrorHandler()` won't be called.  
 (Neither will default express error handler).  
 (This behavior might be changed in the future should the need come).**
