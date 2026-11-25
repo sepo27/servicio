@@ -1,3 +1,9 @@
+## 0.3.0 (2026-11-25)
+
+* feat: Support default error handler ([a0583e6](https://github.com/sepo27/servicio/commit/a0583e6))
+* test: Reorg specs to use TMock ([8d74681](https://github.com/sepo27/servicio/commit/8d74681))
+* chore: Update linting to include specs ([70b3300](https://github.com/sepo27/servicio/commit/70b3300))
+
 ## <small>0.2.11 (2026-11-25)</small>
 
 * chore: Switch from prepare to prepack npm script ([526a745](https://github.com/sepo27/servicio/commit/526a745))
