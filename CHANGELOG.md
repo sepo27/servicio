@@ -1,3 +1,7 @@
+## <small>0.2.5 (2026-11-25)</small>
+
+* chore(doc): Update README ([e40e00d](https://github.com/sepo27/servicio/commit/e40e00d))
+
 ## <small>0.2.4 (2026-11-25)</small>
 
 * doc: Update README ([655ec77](https://github.com/sepo27/servicio/commit/655ec77))
