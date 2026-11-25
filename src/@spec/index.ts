@@ -1,1 +1,1 @@
-export * from './mocks/index.js';
+export { TMock } from './mock/TMock.js';

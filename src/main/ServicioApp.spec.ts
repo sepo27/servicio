@@ -2,17 +2,19 @@ import express from 'express';
 import { HttpMethod, HttpStatus, SuccessResponse } from '../lib/http-meta/index.js';
 import { Route } from './Route.js';
 import { ServicioApp } from './ServicioApp.js';
-import { expressRequestMock, expressResponseMock } from '../@spec/index.js';
+import { TMock } from '../@spec/index.js';
 import { ExpressHttpMethod } from '../lib/express/types.js';
 
 describe('ServicioApp', () => {
   let expressApp: express.Express,
     app: ServicioApp,
+    mock: TMock,
     expressMethodMockMap: Record<HttpMethod, jest.Mock>;
 
   beforeEach(() => {
     expressApp = express();
     app = new ServicioApp(expressApp);
+    mock = new TMock();
 
     expressMethodMockMap = Object.values(HttpMethod).reduce((acc, method) => Object.assign(acc, {
       [method]: jest.spyOn(expressApp, method.toLowerCase() as ExpressHttpMethod),
@@ -20,6 +22,7 @@ describe('ServicioApp', () => {
   });
 
   afterEach(() => {
+    mock.reset();
   });
 
   it('addRoute() adds route to express app for all methods', () => {
@@ -106,10 +109,10 @@ describe('ServicioApp', () => {
     app.addRoute(route);
 
     const routeHandlerWrapper = (expressMethodMock.mock.calls[0] as unknown as [string, express.RequestHandler])[1];
-    const resMock = expressResponseMock();
+    const resMock = mock.express.res;
 
     // @ts-ignore
-    await routeHandlerWrapper(expressRequestMock(), resMock);
+    await routeHandlerWrapper(mock.express.req, resMock);
 
     return resMock;
   }
