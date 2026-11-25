@@ -1,3 +1,8 @@
+## <small>0.2.11 (2026-11-25)</small>
+
+* chore: Switch from prepare to prepack npm script ([526a745](https://github.com/sepo27/servicio/commit/526a745))
+* chore: Fix release script typo ([19641f1](https://github.com/sepo27/servicio/commit/19641f1))
+
 ## <small>0.2.10 (2026-11-25)</small>
 
 * chore: Add colors to release script ([102e2a9](https://github.com/sepo27/servicio/commit/102e2a9))
