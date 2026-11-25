@@ -1,32 +1,48 @@
 #!/usr/bin/env bash
 
+### Functions ###
+
+RED='\033[31m'
+GREEN='\033[32m'
+RESET='\033[0m'
+
+function info() {
+  local msg="$1"
+  printf '%b\n' "${GREEN}${msg}${RESET}"
+}
+
+function error() {
+  local msg="$1"
+  printf '%b\n' "${RED}${msg}${RESET}"
+  exit 1
+}
+
 ### Input ###
 
 version="$1"
 
 if [[ -z "$version" ]]; then
-  echo "Missing version argument"
-  exit 1
+  error "Missing version argument"
 fi
 
 ### Main ###
 
-echo "=== Versioning: $version"
+info "=== Versioning: $version" && echo
 
 pnpm version "$version"
 
 echo
 
-echo "=== Pushing (code + tags)"
+info "=== Pushing (code + tags)" && echo
 
 git push && git push --tags
 
 echo
 
-echo "==== Publishing"
+info "==== Publishing" && echo
 
 pnpm publish
 
 echo
 
-echo "=== Done."
+info "=== Done."
