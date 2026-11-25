@@ -1,3 +1,8 @@
+## <small>0.3.1 (2026-11-25)</small>
+
+* chore: Add default patch version to release script ([7b8afeb](https://github.com/sepo27/servicio/commit/7b8afeb))
+* docs: Update README ([b05d74a](https://github.com/sepo27/servicio/commit/b05d74a))
+
 ## 0.3.0 (2026-11-25)
 
 * feat: Support default error handler ([a0583e6](https://github.com/sepo27/servicio/commit/a0583e6))
