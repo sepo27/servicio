@@ -1,7 +1,7 @@
 {
   "name": "@sepo27/servicio",
   "description": "Backend Service Frame",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "type": "module",
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
@@ -52,7 +52,13 @@
   "peerDependencies": {
     "express": "^5.3.0"
   },
-  "keywords": ["backend", "service", "server", "framework", "express"],
+  "keywords": [
+    "backend",
+    "service",
+    "server",
+    "framework",
+    "express"
+  ],
   "author": "Sergey Poskachey",
   "license": "ISC"
 }

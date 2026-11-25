@@ -1,3 +1,7 @@
+## <small>0.2.6 (2026-11-25)</small>
+
+* chore: Add package keywords ([0824bac](https://github.com/sepo27/servicio/commit/0824bac))
+
 ## <small>0.2.5 (2026-11-25)</small>
 
 * chore(doc): Update README ([e40e00d](https://github.com/sepo27/servicio/commit/e40e00d))
