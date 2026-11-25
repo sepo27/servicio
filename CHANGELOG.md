@@ -1,3 +1,7 @@
+## <small>0.2.1 (2026-11-25)</small>
+
+* chore: Prep for publish ([59b4eab](https://github.com/sepo27/servicio/commit/59b4eab))
+
 ## 0.2.0 (2026-11-25)
 
 * feat: Implement base skeleton ([37661e3](https://github.com/sepo27/servicio/commit/37661e3))
