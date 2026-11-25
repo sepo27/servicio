@@ -1,5 +1,5 @@
 {
-  "name": "servicio",
+  "name": "@sepo27/servicio",
   "description": "Backend Service Frame",
   "version": "0.2.1",
   "type": "module",

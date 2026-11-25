@@ -11,7 +11,7 @@ Backend Service Frame.
 # Quick Start
 
 ```typescript
-import { Route, servicio, HttpStatus, SuccessResponse } from 'servicio';
+import { Route, servicio, HttpStatus, SuccessResponse } from '@sepo27/servicio';
 
 const app = servicio();
 
