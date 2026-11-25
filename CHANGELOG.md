@@ -1,3 +1,7 @@
+## <small>0.3.2 (2026-11-25)</small>
+
+* docs: Update README ([189f2d0](https://github.com/sepo27/servicio/commit/189f2d0))
+
 ## <small>0.3.1 (2026-11-25)</small>
 
 * chore: Add default patch version to release script ([7b8afeb](https://github.com/sepo27/servicio/commit/7b8afeb))
