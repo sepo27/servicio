@@ -15,10 +15,18 @@ echo "=== Versioning: $version"
 
 pnpm version "$version"
 
-echo "=== Pushing (code * tags)"
+echo
+
+echo "=== Pushing (code + tags)"
 
 git push && git push --tags
+
+echo
 
 echo "==== Publishing"
 
 pnpm publish
+
+echo
+
+echo "=== Done."
