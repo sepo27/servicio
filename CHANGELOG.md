@@ -1,3 +1,5 @@
+## <small>0.2.9 (2026-11-25)</small>
+
 ## <small>0.2.8 (2026-11-25)</small>
 
 * chore: Update release script ([e5c14a0](https://github.com/sepo27/servicio/commit/e5c14a0))
