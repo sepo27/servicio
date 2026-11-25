@@ -2,7 +2,7 @@ import supertest from 'supertest';
 import { servicio } from './servicio.js';
 import { Servicio } from './types.js';
 import { Route } from './Route.js';
-import { BadRequestError, HttpStatus, SuccessResponse } from '../lib/http-meta/index.js';
+import { BadRequestError, HttpStatus, SuccessResponse, InternalServerError } from '../lib/http-meta/index.js';
 
 describe('servicio', () => {
   let app: Servicio, agent: supertest.Agent;
@@ -43,8 +43,9 @@ describe('servicio', () => {
       });
   });
 
-  it('handles simple response error', async () => {
-    const error = new BadRequestError(),
+  it('handles http error with status by default (w/ express default handler)', async () => {
+    const
+      error = new BadRequestError(),
       route = new Route('GET /xyz', () => {
         throw error;
       });
@@ -54,21 +55,28 @@ describe('servicio', () => {
     await agent.get('/xyz').expect(error.status);
   });
 
-  xit('handles response error with body', async () => {
-    const error = new BadRequestError({
+  it('handles http error with status by error handler', async () => {
+    const
+      error = new InternalServerError(),
+      route = new Route('GET /xyz', () => {
+        throw error;
+      });
+
+    app.addRoute(route).useErrorHandler();
+
+    await agent.get('/xyz').expect(error.status);
+  });
+
+  it('handles http error with status and body by error handler', async () => {
+    const
+      error = new BadRequestError({
         body: { message: 'Test error occurred' },
       }),
       route = new Route('GET /baz', () => {
         throw error;
       });
 
-    app.addRoute(route);
-
-    // @ts-ignore
-    app.use((err, req, res, next) => {
-      console.log('=== err', err);
-      return next(err);
-    });
+    app.addRoute(route).useErrorHandler();
 
     await agent
       .get('/baz')

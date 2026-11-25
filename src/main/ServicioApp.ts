@@ -2,15 +2,10 @@ import express from 'express';
 import { Route } from './Route.js';
 import { HttpResponse } from '../lib/http-meta/index.js';
 import { RouteHandler } from './types.js';
+import { errorHandler } from './errorHandler.js';
 
 export class ServicioApp {
-  constructor(private readonly _express: express.Express) {
-    // @ts-ignore
-    _express.use((_, res, next, err) => {
-      console.log('=== err', err);
-      return next();
-    });
-  }
+  constructor(private readonly _express: express.Express) {}
 
   /*** Public ***/
 
@@ -19,6 +14,11 @@ export class ServicioApp {
     // @ts-ignore: TODO ?
     this._express[expressMethod](route.endpoint.path, this.wrapRouteHandler(route.handler));
 
+    return this;
+  }
+
+  public useErrorHandler(): this {
+    this._express.use(errorHandler);
     return this;
   }
 

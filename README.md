@@ -55,5 +55,24 @@ So all express functionality is preserved as is.
 A library (exported from `servicio` itself) exposing HTTP meta interfaces (HTTP method, status codes, response classes etc).  
 See respective Typescript definitions.
 
+## Error handling
 
+[Express error handling](https://expressjs.com/en/5x/guide/error-handling/) is supported out of the box.  
+Also, `HttpError` and its derivative classes can be used to quickly throw respective errors from handlers (see `BadRequestError`, etc (re)exports from `http-meta` library).  
+If instance of `HttpError` is thrown with optional `headers` it will be caught & handled by [express default error handler](https://expressjs.com/en/5x/guide/error-handling/#the-default-error-handler).  
+However, body isn't handled by default.  
+Use servicio default error handler instead to fully support `HttpError`s:
+```typescript
+const app = servicio();
 
+// Add routes here ...
+
+app.useErrorHandler();
+```
+
+**(i) `useErrorHandler()` has to be called at the end same way as any other express error handler.**  
+
+**(i) Servicio default error handler does not pass through !  
+So any error (and in-fact other) handler used below `useErrorHandler()` won't be called.  
+(Neither will default express error handler).  
+(This behavior might be changed in the future should the need come)**

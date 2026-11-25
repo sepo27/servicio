@@ -4,7 +4,5 @@ export { HttpStatus } from './response/httpStatus.js';
 export type { HttpResponse } from './response/HttpResponse.js';
 export { SuccessResponse } from './response/SuccessResponse.js';
 
-export {
-  HttpError,
-  BadRequestError,
-} from './response/errors/index.js';
+// Export response errors
+export * from './response/errors/index.js';

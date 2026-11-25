@@ -4,6 +4,7 @@ import { Route } from './Route.js';
 import { ServicioApp } from './ServicioApp.js';
 import { TMock } from '../@spec/index.js';
 import { ExpressHttpMethod } from '../lib/express/types.js';
+import * as errorHandlerModule from './errorHandler.js';
 
 describe('ServicioApp', () => {
   let expressApp: express.Express,
@@ -92,6 +93,15 @@ describe('ServicioApp', () => {
     expect(resMock.status).toHaveBeenCalledWith(response.status);
     expect(resMock.set).toHaveBeenCalledWith(responseHeaders);
     expect(resMock.send).toHaveBeenCalledWith(responseBody);
+  });
+
+  it('useErrorHandler() uses default error handler', () => {
+    const errorHandlerMock = jest.spyOn(errorHandlerModule, 'errorHandler'),
+      expressUseMock = jest.spyOn(expressApp, 'use');
+
+    app.useErrorHandler();
+
+    expect(expressUseMock).toHaveBeenCalledWith(errorHandlerMock);
   });
 
   /*** Private ***/
