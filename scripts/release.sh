@@ -19,7 +19,7 @@ function error() {
 
 ### Input ###
 
-version="$1"
+version="${1:-"patch"}"
 
 if [[ -z "$version" ]]; then
   error "Missing version argument"
