@@ -1,3 +1,7 @@
+## 0.4.0 (2026-11-26)
+
+* feat: Refactor addRoute() to useRoute() ([3258451](https://github.com/sepo27/servicio/commit/3258451))
+
 ## <small>0.3.2 (2026-11-25)</small>
 
 * docs: Update README ([189f2d0](https://github.com/sepo27/servicio/commit/189f2d0))
