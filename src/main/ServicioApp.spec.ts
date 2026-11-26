@@ -26,7 +26,7 @@ describe('ServicioApp', () => {
     mock.reset();
   });
 
-  it('addRoute() adds route to express app for all methods', () => {
+  it('useRoute() adds route to express app for all methods', () => {
     const paths = ['/foo', '/bar/:bar', '/abc'],
       endpoints = Object.values(HttpMethod).map(method => {
         const pathIdx = Math.floor(Math.random() * paths.length),
@@ -41,13 +41,13 @@ describe('ServicioApp', () => {
       const route = new Route(endpoint, () => Promise.resolve(new SuccessResponse()));
       const expressMethodMock = expressMethodMockMap[endpoint.method];
 
-      app.addRoute(route);
+      app.useRoute(route);
 
       expect(expressMethodMock).toHaveBeenCalledWith(route.endpoint.path, wrapRouteHandlerMock);
     });
   });
 
-  it('addRoute() wraps route handler to send http status', async () => {
+  it('useRoute() wraps route handler to send http status', async () => {
     const response = new SuccessResponse(HttpStatus.ACCEPTED),
       route = new Route('GET /foo', () => Promise.resolve(response));
 
@@ -57,7 +57,7 @@ describe('ServicioApp', () => {
     expect(resMock.send).toHaveBeenCalled();
   });
 
-  it('addRoute() wraps route handler to send http body', async () => {
+  it('useRoute() wraps route handler to send http body', async () => {
     const responseBody = { foo: 'bar' },
       response = new SuccessResponse({ status: HttpStatus.OK, body: responseBody }),
       route = new Route('GET /foo', () => Promise.resolve(response));
@@ -69,7 +69,7 @@ describe('ServicioApp', () => {
     expect(resMock.send).toHaveBeenCalledWith(responseBody);
   });
 
-  it('addRoute() wraps route handler to send http headers', async () => {
+  it('useRoute() wraps route handler to send http headers', async () => {
     const responseHeaders = { 'x-header': 'abc' },
       response = new SuccessResponse({ status: HttpStatus.OK, headers: responseHeaders }),
       route = new Route('GET /foo', () => Promise.resolve(response));
@@ -82,7 +82,7 @@ describe('ServicioApp', () => {
     expect(resMock.send).toHaveBeenCalled();
   });
 
-  it('addRoute() wraps route handler to send http status, body and headers', async () => {
+  it('useRoute() wraps route handler to send http status, body and headers', async () => {
     const responseHeaders = { 'x-header': 'abc' },
       responseBody = { ok: true },
       response = new SuccessResponse({ status: HttpStatus.OK, headers: responseHeaders, body: responseBody }),
@@ -116,7 +116,7 @@ describe('ServicioApp', () => {
   async function runRouteHandlerWrapper(route: Route) {
     const expressMethodMock = jest.spyOn(expressApp, route.endpoint.method.toLowerCase() as ExpressHttpMethod);
 
-    app.addRoute(route);
+    app.useRoute(route);
 
     const routeHandlerWrapper = (expressMethodMock.mock.calls[0] as unknown as [string, express.RequestHandler])[1];
     const resMock = mock.express.res;

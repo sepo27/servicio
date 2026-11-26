@@ -9,7 +9,7 @@ export class ServicioApp {
 
   /*** Public ***/
 
-  public addRoute(route: Route): this {
+  public useRoute(route: Route): this {
     const expressMethod = route.endpoint.method.toLowerCase();
     // @ts-ignore: TODO ?
     this._express[expressMethod](route.endpoint.path, this.wrapRouteHandler(route.handler));

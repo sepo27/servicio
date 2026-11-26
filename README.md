@@ -36,7 +36,7 @@ const fooRoute = new Route('GET /foo', () => {
   });
 });
 
-app.addRoute(fooRoute);
+app.useRoute(fooRoute);
 
 app.listen(3000, () => {
   console.log('=== Servicio listening on port 3000');

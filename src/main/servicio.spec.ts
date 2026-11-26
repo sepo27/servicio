@@ -33,7 +33,7 @@ describe('servicio', () => {
     });
     const route = new Route('GET /abc', () => response);
 
-    app.addRoute(route);
+    app.useRoute(route);
 
     await agent
       .get('/abc')
@@ -50,7 +50,7 @@ describe('servicio', () => {
         throw error;
       });
 
-    app.addRoute(route);
+    app.useRoute(route);
 
     await agent.get('/xyz').expect(error.status);
   });
@@ -62,7 +62,7 @@ describe('servicio', () => {
         throw error;
       });
 
-    app.addRoute(route).useErrorHandler();
+    app.useRoute(route).useErrorHandler();
 
     await agent.get('/xyz').expect(error.status);
   });
@@ -76,7 +76,7 @@ describe('servicio', () => {
         throw error;
       });
 
-    app.addRoute(route).useErrorHandler();
+    app.useRoute(route).useErrorHandler();
 
     await agent
       .get('/baz')
